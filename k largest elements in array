@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    vector<int> kLargest(vector<int>& arr, int k) {
+        // Your code here
+                int n = arr.size() - 1;
+        
+        sort(arr.begin(), arr.end());
+        vector<int> k_largest;
+        
+        for(int i = n; i > (n-k); --i){
+            k_largest.push_back(arr[i]);
+        }
+        
+        return k_largest;
+
+    }
+};
